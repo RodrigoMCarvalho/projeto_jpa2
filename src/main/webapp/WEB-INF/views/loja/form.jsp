@@ -49,7 +49,7 @@
 									<select class="form-control">
 										<option selected>Categoria</option>	
 										<option>Tecnologia</option>	
-										<option>MÃºsica</option>	
+										<option>Música</option>	
 										<option>Moda</option>
 									</select>
 								</p>
