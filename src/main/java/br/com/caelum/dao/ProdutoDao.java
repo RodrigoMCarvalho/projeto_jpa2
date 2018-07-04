@@ -91,7 +91,6 @@ public class ProdutoDao {
 		TypedQuery<Produto> typedQuery = em.createQuery(query);
 
 		return typedQuery.getResultList();
-
 	}
 
 	public void insere(Produto produto) {
