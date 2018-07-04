@@ -20,7 +20,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @EnableTransactionManagement
 public class JpaConfigurator {
 
-	@Bean
+	@Bean(destroyMethod = "close")
 	public DataSource getDataSource() throws PropertyVetoException {
 //	    DriverManagerDataSource dataSource = new DriverManagerDataSource();
 //
@@ -39,8 +39,8 @@ public class JpaConfigurator {
 		dataSource.setUser("root");
 		dataSource.setPassword("");
 		
-		dataSource.setMinPoolSize(3);
-		dataSource.setMaxPoolSize(5);
+		dataSource.setMinPoolSize(5);
+		dataSource.setMaxPoolSize(10);
 		dataSource.setNumHelperThreads(15);
 		
 		return dataSource;
